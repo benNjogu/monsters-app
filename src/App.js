@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { CardList } from "./components/card-list/card-list.component";
-import "../src/App.css";
+import "./App.css";
 import Search from "./components/search-box/search-box.component";
 class App extends Component {
   constructor() {
@@ -30,7 +30,8 @@ class App extends Component {
     };
 
     return (
-      <div>
+      <div className="App">
+        <h1>Monsters Rolodex</h1>
         <Search placeholder={"Search Monsters"} handleChange={handleChange} />
         <CardList monsters={filteredMonsters} />
       </div>
